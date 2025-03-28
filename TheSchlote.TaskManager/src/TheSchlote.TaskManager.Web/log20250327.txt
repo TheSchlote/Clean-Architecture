@@ -1,0 +1,47 @@
+2025-03-27 20:42:13.320 -05:00 [INF] Registered 5 endpoints in 1,182 milliseconds.
+2025-03-27 20:42:14.484 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-03-27 20:42:14.554 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2025-03-27 20:42:14.692 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-03-27 20:42:14.779 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-03-27 20:42:14.786 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-03-27 20:42:14.926 -05:00 [INF] Now listening on: https://localhost:57679
+2025-03-27 20:42:14.930 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-27 20:42:14.979 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 20:42:14.980 -05:00 [INF] Hosting environment: Development
+2025-03-27 20:42:14.980 -05:00 [INF] Content root path: T:\Repos\Clean-Architecture\TheSchlote.TaskManager\src\TheSchlote.TaskManager.Web
+2025-03-27 20:42:41.778 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-27 20:42:41.884 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 404 0 null 111.4445ms
+2025-03-27 20:42:41.890 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/, Response status code: 404
+2025-03-27 20:42:43.632 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-27 20:42:43.640 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 404 0 null 7.9334ms
+2025-03-27 20:42:43.642 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/, Response status code: 404
+2025-03-27 20:44:09.904 -05:00 [INF] Registered 5 endpoints in 206 milliseconds.
+2025-03-27 20:44:10.489 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-03-27 20:44:10.653 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-03-27 20:44:10.775 -05:00 [INF] Now listening on: https://localhost:57679
+2025-03-27 20:44:10.778 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-27 20:44:10.822 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 20:44:10.822 -05:00 [INF] Hosting environment: Development
+2025-03-27 20:44:10.823 -05:00 [INF] Content root path: T:\Repos\Clean-Architecture\TheSchlote.TaskManager\src\TheSchlote.TaskManager.Web
